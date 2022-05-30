@@ -1,0 +1,131 @@
+.container {
+  border: 3px solid rgb(35, 148, 173);
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  height: 30rem;
+  width: 30rem;
+  box-shadow: -2px 8px 43px 8px rgba(100, 100, 111, 1);
+}
+
+.choose {
+  display: inline-block;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+
+.press,
+.press2 {
+  display: inline-block;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+
+.press:active,
+.press2:active {
+  color: rgb(35, 148, 173);
+}
+
+h1.city {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 72px;
+  opacity: rgba(0, 0, 0, 2);
+  margin-top: 2rem;
+  margin-right: 50px;
+  position: relative;
+  padding-right: 50px;
+}
+h2.temperature {
+  display: inline-block;
+  text-decoration: none;
+  /* margin-left: 13rem; */
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 2);
+  float: right;
+  margin-top: 5rem;
+  margin-left: 10px;
+}
+
+span {
+  text-decoration: none;
+  float: right;
+  margin-top: 80px;
+}
+
+h2.celsius {
+  display: block;
+  text-decoration: none;
+  /* margin-left: 13rem; */
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 2);
+  /* float: right; */
+  margin-top: 5rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div.lol {
+  display: inline-block;
+  color: rgb(35, 148, 173);
+  float: left;
+  margin-left: -10px;
+  position: relative;
+}
+
+h2.day {
+  display: block;
+  text-decoration: none;
+  color: rgb(35, 148, 173);
+  font-weight: bold;
+  float: left;
+  /* padding-top: -10rem; */
+  /* padding-left: 10px; */
+}
+
+div.kk {
+  display: block;
+  position: relative;
+  margin-left: 24rem;
+  margin-bottom: -6.25rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+div.row {
+  margin-top: 150px;
+  flex-wrap: wrap;
+}
+
+div.lk {
+  margin-left: 5px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+div.lk1 {
+  margin-right: 40px;
+  font-weight: bold;
+}
+div.lk2 {
+  margin-right: 40px;
+  font-weight: bold;
+}
+div.lk3 {
+  margin-right: 40px;
+  font-weight: bold;
+}
+div.lk4 {
+  margin-right: 37px;
+  font-weight: bold;
+}
+div.lk5 {
+  margin-right: 35px;
+  font-weight: bold;
+}
+
+div.row2 {
+  margin-top: 10px;
+}
