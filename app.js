@@ -29,7 +29,7 @@ function submitMe(event) {
   let input = document.querySelector("#search-city");
   city.innerHTML = `${input.value}`;
   if (city.innerHTML.length > 7) {
-    city.style.fontSize = "30px";
+    city.style.fontSize = "55px";
   }
 }
 let form = document.querySelector("#search-form");
