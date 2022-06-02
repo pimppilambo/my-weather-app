@@ -3,8 +3,8 @@
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  height: 30.1rem;
-  width: 35rem;
+  height: 30.5rem;
+  max-width: 35rem;
   box-shadow: -2px 8px 43px 8px rgba(100, 100, 111, 1);
 }
 
