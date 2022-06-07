@@ -1,6 +1,6 @@
 let now = new Date();
 
-let did = document.querySelector("#lolly");
+let did = document.querySelector("#day");
 
 let hours = now.getHours();
 if (hours < 10) {
@@ -25,11 +25,11 @@ did.innerHTML = `${day} ${hours}:${minutes}`;
 
 function submitMe(event) {
   event.preventDefault();
-  let city = document.querySelector("h1#cities");
+  let city = document.querySelector("#city");
   let input = document.querySelector("#search-city");
   city.innerHTML = `${input.value}`;
-  if (city.innerHTML.length > 7) {
-    city.style.fontSize = "55px";
+  if (city.innerHTML.length > 8) {
+    city.style.fontSize = "51px";
   }
 }
 let form = document.querySelector("#search-form");
@@ -40,16 +40,16 @@ changeMyCel.addEventListener("click", showMyCel);
 
 function showMyCel(event) {
   event.preventDefault();
-  let myCel = document.querySelector(".temperature");
+  let myCel = document.querySelector("#temp");
   myCel.innerHTML = 58;
 }
 
-let changeMyTemp = document.querySelector("#temp");
+let changeMyTemp = document.querySelector("#tempp");
 changeMyTemp.addEventListener("click", showMyTemp);
 
 function showMyTemp(event) {
   event.preventDefault();
-  let myTemp = document.querySelector(".temperature");
+  let myTemp = document.querySelector("#temp");
   myTemp.innerHTML = 11;
 }
 
@@ -68,8 +68,8 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 function displayWeather(response) {
-  document.querySelector("h1#cities").innerHTML = response.data.name;
-  document.querySelector("h2#temp").innerHTML = Math.round(
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#hum").innerHTML = Math.round(
@@ -78,7 +78,8 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector(".kk").innerHTML = response.data.weather[0].main;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
 }
 
 function showMyPosition(position) {
@@ -92,5 +93,5 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showMyPosition);
 }
 
-let button = document.querySelector("#mylook");
+let button = document.querySelector("#location");
 button.addEventListener("click", getCurrentPosition);

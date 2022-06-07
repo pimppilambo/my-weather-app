@@ -1,139 +1,91 @@
-.container {
-  border: 3px solid rgb(35, 148, 173);
-  border-radius: 20px;
+#weather-app-border {
+  border: 2px solid rgb(35, 148, 173);
+  border-radius: 25px;
   display: block;
   margin: 0 auto;
-  height: 30.5rem;
-  max-width: 35rem;
-  box-shadow: -2px 8px 43px 8px rgba(100, 100, 111, 1);
+  width: 27rem;
+  height: 17rem;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
 
-.choose {
-  display: inline-block;
-  border: 2px solid orange;
-  border-radius: 10px;
-}
-
-.press,
-.press2 {
-  display: inline-block;
-  border: 5px solid white;
-  border-radius: 20px;
-}
-
-.press:active,
-.press2:active {
-  color: rgb(35, 148, 173);
-}
-
-h1.city {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 72px;
-  opacity: rgba(0, 0, 0, 2);
-  margin-top: 2rem;
-  margin-right: 50px;
-  position: relative;
-  padding-right: 50px;
-  padding-bottom: 20px;
-}
-h2.temperature {
-  display: inline-block;
-  text-decoration: none;
-  /* margin-left: 13rem; */
-  font-size: 1.3rem;
-  color: rgba(0, 0, 0, 2);
-  float: right;
-  margin-top: 5rem;
-  margin-left: 10px;
-}
-
-span {
-  text-decoration: none;
-  float: right;
-  margin-top: 80px;
-}
-
-h2.celsius {
-  display: block;
-  text-decoration: none;
-  /* margin-left: 13rem; */
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 2);
-  /* float: right; */
-  margin-top: 5rem;
-  position: relative;
-}
-
-a {
-  text-decoration: none;
+#city {
   color: black;
-}
-
-div.lol {
-  display: inline-block;
-  color: rgb(35, 148, 173);
-  float: left;
-  margin-left: -10px;
-  position: relative;
-  margin-top: 20px;
-}
-
-h2.day {
+  font-size: 5rem;
+  margin-top: 10px;
+  margin-left: 20px;
   display: block;
   text-decoration: none;
+  font-family: "Space Mono", monospace;
+}
+
+#search-city {
+  border: 2px solid orange;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-left: 2px;
+  width: 200px;
+  font-family: "Space Mono", monospace;
+}
+
+#button,
+#location {
+  border: 1px solid rgb(35, 148, 173);
+  border-radius: 20px;
   color: rgb(35, 148, 173);
-  font-weight: bold;
-  float: left;
-  /* padding-top: 30px; */
-  /* padding-left: 10px; */
+  background-color: white;
+  width: 100px;
+  font-family: "Space Mono", monospace;
 }
 
-div.kk {
-  display: block;
-  position: relative;
-  margin-left: 28.6rem;
-  margin-bottom: -6.25rem;
-  font-size: 16px;
-  font-weight: bold;
-}
-div.row {
-  margin-top: 150px;
-  flex-wrap: wrap;
+#button:hover {
+  color: white;
+  background-color: rgb(35, 148, 173);
 }
 
-div.lk {
-  margin-left: 6px;
-  margin-right: 40px;
-  font-weight: bold;
-}
-div.lk1 {
-  margin-right: 42px;
-  font-weight: bold;
-}
-div.lk2 {
-  margin-right: 46px;
-  font-weight: bold;
-}
-div.lk3 {
-  margin-right: 45px;
-  font-weight: bold;
-}
-div.lk4 {
-  margin-right: 45px;
-  font-weight: bold;
-}
-div.lk5 {
-  margin-right: 43px;
-  font-weight: bold;
+#location:hover {
+  color: white;
+  background-color: rgb(35, 148, 173);
 }
 
-div.row2 {
+input {
+  font-weight: bold;
+}
+span {
+  float: right;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+#temp {
+  font-size: 30px;
+  font-family: "Space Mono", monospace;
+}
+
+#tempp,
+#celsius {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(35, 148, 173);
+}
+
+#day {
+  font-family: "Space Mono", monospace;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgb(35, 148, 173);
+}
+
+.description {
+  font-family: "Space Mono", monospace;
+  float: right;
   margin-top: 10px;
+  margin-right: 20px;
+  color: rgb(35, 148, 173);
 }
 
-#git {
-  text-align: center;
-  margin: 0 auto;
-  color: grey;
+.view {
+  font-family: "Space Mono", monospace;
+  margin-top: 20px;
+  color: rgb(35, 148, 173);
 }
