@@ -35,14 +35,14 @@ function submitMe(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitMe);
 
-let changeMyCel = document.querySelector("#celsius");
-changeMyCel.addEventListener("click", showMyCel);
+// let changeMyCel = document.querySelector("#celsius");
+// changeMyCel.addEventListener("click", showMyCel);
 
-function showMyCel(event) {
-  event.preventDefault();
-  let myCel = document.querySelector("#temp");
-  myCel.innerHTML = 58;
-}
+// function showMyCel(event) {
+//   event.preventDefault();
+//   let myCel = document.querySelector("#temp");
+//   myCel.innerHTML = 58;
+// }
 
 let changeMyTemp = document.querySelector("#tempp");
 changeMyTemp.addEventListener("click", showMyTemp);
@@ -50,7 +50,7 @@ changeMyTemp.addEventListener("click", showMyTemp);
 function showMyTemp(event) {
   event.preventDefault();
   let myTemp = document.querySelector("#temp");
-  myTemp.innerHTML = 11;
+  myTemp.innerHTML = Math.round(celTempp);
 }
 
 function search(event) {
@@ -64,22 +64,28 @@ function searchCity(city) {
   let apiURL1 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey1}&units=metric`;
   axios.get(apiURL1).then(displayWeather);
 }
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 function displayWeather(response) {
+  celTempp = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temp").innerHTML = Math.round(celTempp);
   document.querySelector("#hum").innerHTML = Math.round(
     response.data.main.humidity
   );
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+  document.querySelector("p.description").innerHTML =
     response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showMyPosition(position) {
@@ -95,3 +101,15 @@ function getCurrentPosition() {
 
 let button = document.querySelector("#location");
 button.addEventListener("click", getCurrentPosition);
+
+function showFahTemp(event) {
+  event.preventDefault();
+  let tempEle = document.querySelector("#temp");
+  let fahTemp = (celTempp * 9) / 5 + 32;
+  tempEle.innerHTML = Math.round(fahTemp);
+}
+
+let celTempp = null;
+
+let fahlink = document.querySelector("#celsius");
+fahlink.addEventListener("click", showFahTemp);

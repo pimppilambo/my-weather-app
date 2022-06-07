@@ -74,13 +74,14 @@ span {
   margin-left: 10px;
   margin-top: 20px;
   color: rgb(35, 148, 173);
+  font-size: 20px;
 }
 
 .description {
   font-family: "Space Mono", monospace;
   float: right;
   margin-top: 10px;
-  margin-right: 20px;
+  margin-right: -60px;
   color: rgb(35, 148, 173);
 }
 
@@ -88,4 +89,12 @@ span {
   font-family: "Space Mono", monospace;
   margin-top: 20px;
   color: rgb(35, 148, 173);
+}
+
+#git {
+  margin-top: 125px;
+  display: block;
+  text-align: center;
+  color: grey;
+  text-decoration: none;
 }
