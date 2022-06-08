@@ -23,6 +23,12 @@ let days = [
 let day = days[now.getDay()];
 did.innerHTML = `${day} ${hours}:${minutes}`;
 
+// function displayForecast() {
+//   let forecast = document.querySelector("#forecast");
+//   forecast.innerHTML = `
+//   `;
+// }
+
 function submitMe(event) {
   event.preventDefault();
   let city = document.querySelector("#city");
@@ -86,8 +92,6 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
-  console.log(response.data.daily);
 }
 
 function showMyPosition(position) {
@@ -112,6 +116,7 @@ function showFahTemp(event) {
 }
 
 let celTempp = null;
+displayForecast();
 
 let fahlink = document.querySelector("#celsius");
 fahlink.addEventListener("click", showFahTemp);
